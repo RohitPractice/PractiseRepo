@@ -1,0 +1,26 @@
+﻿@using MyPraticeApplication.Controllers
+@*@model MyPraticeApplication.Models.Student*@
+@using MyPraticeApplication.Models
+
+@{
+    ViewBag.Title = "Student";
+    var infoData = (IEnumerable<Student>)TempData["info"];
+}
+<label>Student Institue Name </label>
+@*<h2>@((TempData["info"] as Student))</h2>*@
+
+<label>Student Name </label>
+@foreach (var data in infoData)
+{
+      @Html.DisplayFor(m => data.Name)
+      @Html.DisplayFor(m => data.Institute)
+ }
+    
+
+
+
+
+
+
+
+
